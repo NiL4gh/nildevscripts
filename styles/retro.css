@@ -362,6 +362,26 @@ nav a:hover, nav a.active {
   background: var(--accent-amber-light);
 }
 
+/* Simulator Output Panel — clean light box, no code styling */
+.sim-output-box {
+  background: #fdfcf9;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.925rem;
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+.sim-output-box strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
 /* FAQ Accordion */
 .faq-item {
   background: var(--panel-bg);
