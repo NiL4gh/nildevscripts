@@ -1,0 +1,482 @@
+/* ==========================================================================
+   RETRO-TECH SWISS LIGHT DESIGN SYSTEM: Niloy's Illustrator Script Suite
+   Aesthetic: Warm Off-White / Technical Manual Precision / Clean Swiss Typography
+   ========================================================================== */
+
+:root {
+  --bg-color: #fbfaf7;
+  --panel-bg: #ffffff;
+  --panel-border: #e4dfd5;
+  --panel-border-hover: #d97706;
+  --text-main: #18202f;
+  --text-muted: #5f6e85;
+  --accent-amber: #d97706;
+  --accent-amber-light: #fef3c7;
+  --accent-green: #059669;
+  --accent-green-light: #d1fae5;
+  --accent-cyan: #0284c7;
+  --accent-cyan-light: #e0f2fe;
+  --code-bg: #f4f1ea;
+  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 2px 8px rgba(24, 32, 47, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(24, 32, 47, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle Technical Grid Background Pattern */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Header Navigation */
+header {
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.brand-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.logo {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  color: var(--accent-amber);
+}
+
+nav a {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+nav a:hover, nav a.active {
+  color: var(--accent-amber);
+  background: var(--accent-amber-light);
+}
+
+/* Hero Section */
+.hero {
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 3rem;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-amber);
+  background: var(--accent-amber-light);
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  color: var(--text-main);
+}
+
+.hero p.lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+/* Technical Specification / Console Box */
+.terminal-card {
+  background: var(--code-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: #334155;
+  margin: 2rem 0;
+  overflow-x: auto;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.terminal-header {
+  color: var(--text-muted);
+  border-bottom: 1px dashed var(--panel-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin: 3rem 0;
+}
+
+.price-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.price-card:hover {
+  border-color: var(--panel-border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.price-card.featured {
+  border: 2px solid var(--accent-amber);
+  background: #fffdfa;
+}
+
+.price-card h3 {
+  font-size: 1.35rem;
+  font-family: var(--font-mono);
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.price-amount {
+  font-size: 2.75rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--accent-amber);
+  margin: 1.25rem 0;
+}
+
+.price-amount span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 1.75rem 0;
+}
+
+.feature-list li {
+  font-size: 0.925rem;
+  color: var(--text-main);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-list li::before {
+  content: "✓ ";
+  color: var(--accent-green);
+  font-weight: 800;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent-amber);
+  color: #ffffff;
+  border-color: var(--accent-amber);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+}
+
+.btn-primary:hover {
+  background: #b45309;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.35);
+}
+
+.btn-secondary {
+  background: #f8fafc;
+  color: var(--text-main);
+  border: 1px solid var(--panel-border);
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+  border-color: var(--text-main);
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* Feature Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 0.95rem;
+  background: var(--panel-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.comparison-table th {
+  background: #f8f6f0;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  text-transform: uppercase;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover td {
+  background: #fdfbf7;
+}
+
+/* Interactive Preset Simulator */
+.interactive-simulator {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  margin: 3rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.sim-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sim-btn {
+  background: #f8f6f0;
+  border: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sim-btn.active, .sim-btn:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  background: var(--accent-amber-light);
+}
+
+/* FAQ Accordion */
+.faq-item {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: none;
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-question {
+  color: var(--accent-amber);
+}
+
+/* Catalog Grid (Homepage) */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.catalog-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+.catalog-card:hover {
+  border-color: var(--accent-amber);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.catalog-card h3 {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.catalog-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Copy Snippet Box */
+.copy-box {
+  background: var(--code-bg);
+  border: 1px solid var(--panel-border);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #1e293b;
+  margin: 0.5rem 0;
+}
+
+.copy-btn {
+  background: #ffffff;
+  border: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--panel-border);
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
