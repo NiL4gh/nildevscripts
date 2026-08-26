@@ -110,7 +110,7 @@
         <header class="article-hero" style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 2.75rem 2.5rem; border-radius: var(--radius-md); margin-bottom: 3.5rem; box-shadow: var(--shadow-md); position: relative;">
           <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3); margin-bottom: 1.25rem;">GUIDE // BATCH AUTOMATION</span>
           <h1 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -1.2px; margin-bottom: 1.25rem; line-height: 1.2; color: var(--text-main);">How to Batch Export Vectors in Adobe Illustrator: The Complete Production Guide</h1>
-          <p class="lead" style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2rem;">A comprehensive technical guide for commercial vector contributors and digital product creators. Learn why native Actions fail in large production runs, how microstock and marketplace export specifications differ, and how to build a reliable batch workflow.</p>
+          <p class="lead" style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2rem;">A verified technical guide for commercial vector contributors and digital product creators. Learn why native Actions fail in high-volume production, how microstock and marketplace specifications differ, and how to eliminate repetitive export overhead.</p>
 
           <!-- Author & Publication Metadata Bar -->
           <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--panel-border); padding-top: 1.25rem; font-family: var(--font-mono); font-size: 0.825rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem;">
@@ -133,14 +133,14 @@
             For professional vector artists, design studios, and microstock contributors, artwork creation is only half the battle. Once 50 or 100 vector illustrations or icon sets are designed, preparing them for commercial distribution is often an exhausting, repetitive chore.
           </p>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            When exporting a release batch manually, an artist must repeat a multi-step routine for every single file:
+            When preparing files manually, an artist must repeat a multi-step routine for every single file:
           </p>
           <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
             <li>Open the master <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">.ai</code> document in Adobe Illustrator.</li>
             <li>Run pre-flight sanitation: outline live fonts, clean up stray anchor points, unlock hidden layers.</li>
-            <li>Re-center the artwork and fit the artboard with appropriate margins.</li>
-            <li>Export legacy <strong>EPS 10</strong> or save compatible vector payloads.</li>
-            <li>Render high-resolution <strong>RGB JPEG preview images</strong> (meeting platform megapixel requirements).</li>
+            <li>Re-center the artwork and fit the artboard to artwork visible bounds.</li>
+            <li>Save standalone vector files (EPS 10, AI CS6+, or SVG) or multi-format product bundles.</li>
+            <li>Verify platform-specific resolution requirements (e.g. 15–65 MP for Adobe Stock, 4–25 MP for Shutterstock).</li>
             <li>Package assets and rename files to match strict platform upload conventions.</li>
           </ul>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
@@ -165,7 +165,7 @@
         <section style="margin-bottom: 3.5rem;">
           <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">2. Why Native Illustrator Actions Fail in Large Batches</h2>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Illustrator includes a built-in <strong>Actions Panel</strong> with a <em>Batch...</em> command (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Actions Panel flyout &gt; Batch</code>). While useful for simple tasks, relying on native Actions for heavy multi-format vector exports frequently causes severe production roadblocks:
+            Illustrator includes a built-in <strong>Actions Panel</strong> with a <em>Batch...</em> command (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Actions Panel flyout &gt; Batch</code>). While useful for simple tasks, relying on native Actions for heavy vector exports frequently causes severe production roadblocks:
           </p>
 
           <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.1 RAM Accumulation and Application Crashes</h3>
@@ -184,11 +184,11 @@
           </p>
         </section>
 
-        <!-- Section 3: Understanding Marketplace Export Specifications -->
+        <!-- Section 3: Verified Marketplace Submission Guidelines -->
         <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">3. Understanding Marketplace Export Specifications</h2>
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">3. Verified Marketplace Submission Guidelines (2026)</h2>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            One of the biggest pitfalls for vector contributors is confusing <strong>microstock agency requirements</strong> with <strong>digital marketplace product bundle formats</strong>. Each channel enforces distinct file formats, preview dimensions, and packaging rules:
+            One of the biggest pitfalls for vector creators is confusing <strong>microstock agency submission rules</strong> with <strong>digital marketplace product bundle formats</strong>. Here are the exact, verified technical requirements:
           </p>
 
           <div style="overflow-x: auto; margin: 2rem 0;">
@@ -196,45 +196,52 @@
               <thead>
                 <tr style="background: var(--code-bg); text-align: left;">
                   <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Channel / Platform</th>
-                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Primary Vector Format</th>
-                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Preview Requirement</th>
-                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Packaging Structure</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Accepted Vector Formats</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Artboard / Bounding Box Size</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Max File Size</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Preview Rules</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Adobe Stock</strong></td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">AI (CS6+) or EPS 10 (&lt; 45 MB)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Standalone JPEG (4 MP – 100 MP, RGB)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Loose files with matching base filenames</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">AI (CS6+), EPS 10, or SVG</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">15 MP to 65 MP (RGB mode)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">45 MB</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Auto-generated by Adobe Stock (No separate JPEG needed)</td>
                 </tr>
                 <tr>
                   <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Shutterstock</strong></td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">EPS 10 or EPS 8 (&lt; 100 MB)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Matching JPEG (4 MP – 25 MP, RGB)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Paired EPS + JPEG in same folder</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">EPS 10 or EPS 8</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">4 MP to 25 MP artwork bounding box</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">100 MB</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Auto-generated from EPS (No separate JPEG needed)</td>
                 </tr>
                 <tr>
                   <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Freepik</strong></td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">EPS 10 (Sanitized filename)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">JPEG preview (2000px – 8000px edge, RGB)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Identical base filenames (lowercase, hyphens)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">EPS (CS6+ compatible) + JPG pair</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Preview: 2,000px – 10,000px (4 MP – 100 MP)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">80 MB (EPS) / 250 MB (JPG)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Paired EPS + JPG with identical lowercase filename</td>
                 </tr>
                 <tr>
                   <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Creative Market / Gumroad</strong></td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Multi-format (AI, EPS, SVG, PDF, PSD)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">High-res presentation cards (1820×1214px)</td>
-                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Individual ZIP bundle per product</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Multi-format ZIP (AI, EPS, SVG, PDF, PSD)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Display Cards: 1820×1214px (CM)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">4 GB (CM server direct)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">High-res product presentation screenshots</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">3.1 Key Microstock Rules</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">3.1 Understanding Megapixels (MP) vs Megabytes (MB)</h3>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            A common contributor rejection is confusing <strong>file size in Megabytes (MB)</strong> with <strong>dimensions in Megapixels (MP)</strong>:
+          </p>
           <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
-            <li><strong>EPS 10 Compatibility:</strong> Fonts must be outlined (<code style="font-family: var(--font-mono);">Ctrl+Shift+O</code> / <code style="font-family: var(--font-mono);">Cmd+Shift+O</code>), transparency set to High Resolution flattener preset, and color mode strictly set to RGB.</li>
-            <li><strong>Megapixel Compliance:</strong> Microstock preview JPEGs are measured in total megapixels (Width × Height in pixels). A 2000×2000px image equals 4.0 Megapixels, satisfying the minimum threshold.</li>
-            <li><strong>Filename Pairing:</strong> Vector files and their companion raster thumbnails must share the exact same base filename (e.g. <code style="font-family: var(--font-mono);">autumn-leaf-01.eps</code> and <code style="font-family: var(--font-mono);">autumn-leaf-01.jpg</code>).</li>
+            <li><strong>Megapixels (MP):</strong> Calculated as <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">(Width in Pixels × Height in Pixels) / 1,000,000</code>. For example, a 2000×2000px square artboard equals 4,000,000 pixels (4.0 MP), satisfying Shutterstock's 4 MP minimum threshold. For Adobe Stock's 15 MP minimum, an artboard must be at least 5000×3000px (15.0 MP) or 3873×3873px (15.0 MP).</li>
+            <li><strong>Megabytes (MB):</strong> The disk storage size of the file itself (e.g. max 45 MB on Adobe Stock, max 100 MB on Shutterstock).</li>
           </ul>
         </section>
 
