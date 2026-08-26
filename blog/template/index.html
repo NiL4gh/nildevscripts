@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+================================================================================
+REUSABLE BLOG POST TEMPLATE // NILOY ILLUSTRATOR SCRIPT SUITE
+================================================================================
+INSTRUCTIONS FOR AUTHORING A NEW ARTICLE:
+1. Duplicate this folder: copy website/blog/template/ -> website/blog/[your-post-slug]/
+2. Replace all template placeholders:
+   - [POST_TITLE]           : e.g. "How to Batch Export Vectors in Adobe Illustrator"
+   - [POST_DESCRIPTION]     : High-intent 150-160 char summary for meta description & social
+   - [POST_SLUG]            : e.g. "how-to-batch-export-vectors-adobe-illustrator"
+   - [POST_CATEGORY]        : e.g. "BATCH AUTOMATION", "PRE-FLIGHT", "EXTENDSCRIPT"
+   - [POST_CATEGORY_BADGE]  : e.g. "PRODUCTION GUIDE // BATCH AUTOMATION"
+   - [POST_LEAD_PARAGRAPH]  : Compelling 1-2 sentence article thesis statement
+   - [AUTHOR_NAME]          : e.g. "Niloy"
+   - [AUTHOR_ROLE]          : e.g. "Production Automation Specialist"
+   - [DATE_PUBLISHED]       : e.g. "August 2026"
+   - [DATE_ISO]             : e.g. "2026-08-27"
+   - [READ_TIME]            : e.g. "8 Min Read"
+3. Customize article sections with H2, H3, paragraphs, terminal cards, and code snippets.
+4. Keep the Product Spotlight CTA box pointed to ../../stockvector-exporter-pro/
+5. Validate relative links: ../../ (Root Catalog), ../ (Blog Archive), ../../privacy/, ../../terms/
+================================================================================
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[POST_TITLE] // Niloy Scripts</title>
+  <meta name="description" content="[POST_DESCRIPTION]">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nil4gh.github.io/nildevscripts/blog/[POST_SLUG]/">
+  <meta name="theme-color" content="#0b1220">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Niloy Illustrator Script Suite">
+  <meta property="og:title" content="[POST_TITLE] // Niloy Scripts">
+  <meta property="og:description" content="[POST_DESCRIPTION]">
+  <meta property="og:url" content="https://nil4gh.github.io/nildevscripts/blog/[POST_SLUG]/">
+  <meta property="og:image" content="https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png">
+  <meta property="article:published_time" content="[DATE_ISO]">
+  <meta property="article:author" content="Niloy">
+  <meta property="article:section" content="[POST_CATEGORY]">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[POST_TITLE] // Niloy Scripts">
+  <meta name="twitter:description" content="[POST_DESCRIPTION]">
+  <meta name="twitter:image" content="https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png">
+
+  <!-- Structured Data: BreadcrumbList & BlogPosting JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Catalog",
+            "item": "https://nil4gh.github.io/nildevscripts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles & Guides",
+            "item": "https://nil4gh.github.io/nildevscripts/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "[POST_TITLE]",
+            "item": "https://nil4gh.github.io/nildevscripts/blog/[POST_SLUG]/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "[POST_TITLE]",
+        "description": "[POST_DESCRIPTION]",
+        "url": "https://nil4gh.github.io/nildevscripts/blog/[POST_SLUG]/",
+        "image": "https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png",
+        "datePublished": "[DATE_ISO]",
+        "dateModified": "[DATE_ISO]",
+        "author": {
+          "@type": "Person",
+          "name": "[AUTHOR_NAME]",
+          "url": "https://github.com/NiL4gh"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Niloy Illustrator Script Suite",
+          "url": "https://nil4gh.github.io/nildevscripts/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://nil4gh.github.io/nildevscripts/blog/[POST_SLUG]/"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../styles/retro.css">
+
+  <!-- Google Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Brand Row -->
+    <header>
+      <div class="brand-row">
+        <a href="../../" class="logo">
+          <span style="color: var(--accent-amber);">■</span> NILOY // <span>SCRIPTS</span>
+        </a>
+        <nav>
+          <a href="../../">CATALOG</a>
+          <a href="../../stockvector-exporter-pro/">STOCKVECTOR EXPORTER</a>
+          <a href="https://github.com/NiL4gh/nildevscripts" target="_blank">GITHUB</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: 1.75rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="../../" style="color: var(--text-muted); text-decoration: none;">CATALOG</a>
+          <span style="color: var(--panel-border); font-weight: bold;">/</span>
+          <a href="../" style="color: var(--text-muted); text-decoration: none;">ARTICLES</a>
+          <span style="color: var(--panel-border); font-weight: bold;">/</span>
+          <span style="color: var(--accent-amber); font-weight: 700; text-transform: uppercase;">[POST_CATEGORY]</span>
+        </nav>
+
+        <!-- Article Header / Hero Banner -->
+        <header class="article-hero" style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 2.75rem 2.5rem; border-radius: var(--radius-md); margin-bottom: 3.5rem; box-shadow: var(--shadow-md); position: relative;">
+          <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3); margin-bottom: 1.25rem;">[POST_CATEGORY_BADGE]</span>
+          <h1 style="font-size: 2.6rem; font-weight: 800; letter-spacing: -1.2px; margin-bottom: 1.25rem; line-height: 1.2; color: var(--text-main);">[POST_TITLE]</h1>
+          <p class="lead" style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2rem;">[POST_LEAD_PARAGRAPH]</p>
+
+          <!-- Author & Publication Metadata Bar -->
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--panel-border); padding-top: 1.25rem; font-family: var(--font-mono); font-size: 0.825rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="color: var(--accent-amber); font-weight: 800;">■</span>
+              <span>AUTHOR: <strong style="color: var(--text-main);">[AUTHOR_NAME]</strong> <span style="color: var(--text-muted); font-size: 0.775rem;">• [AUTHOR_ROLE]</span></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1.25rem;">
+              <span>DATE: <strong style="color: var(--text-main);">[DATE_PUBLISHED]</strong></span>
+              <span style="color: var(--panel-border);">|</span>
+              <span>READ TIME: <strong style="color: var(--accent-amber);">[READ_TIME]</strong></span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Article Section 1: Introduction -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">1. Section Heading Example</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            This is standard body paragraph text formatted with the Swiss light-mode typography scale. Provide actionable, high-value technical context here for vector illustrators, production artists, and agency teams.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Use inline code tags such as <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.2rem 0.45rem; border-radius: var(--radius-sm); font-size: 0.9em; border: 1px solid var(--panel-border);">app.activeDocument.exportFile()</code> to highlight ExtendScript APIs, file paths, or keyboard shortcuts.
+          </p>
+
+          <!-- Technical Callout / Terminal Card -->
+          <div class="terminal-card" style="margin: 2rem 0;">
+            <div class="terminal-header">
+              <span>SYSTEM SPECIFICATION // PRODUCTION ARCHITECTURE</span>
+              <span style="color: var(--accent-green); font-weight: 700;">● VERIFIED ES3 RUNTIME</span>
+            </div>
+            <pre>
+[EXECUTION ENGINE]  Adobe Illustrator ExtendScript ECMAScript 3 (ES3)
+[MEMORY FOOTPRINT]  Sequential document garbage collection lifecycle
+[SUPPORTED HOSTS]   Adobe Illustrator CC 2019 through CC 2026+ (macOS &amp; Windows)
+            </pre>
+          </div>
+        </section>
+
+        <!-- Article Section 2: Detailed Technical Subsection -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">2. Technical Breakdown &amp; Subheadings</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Divide complex engineering workflows into logical subsections using H3 headings, numbered checklists, and formatted code blocks.
+          </p>
+
+          <h3 style="font-size: 1.3rem; font-weight: 700; font-family: var(--font-mono); margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-main);">2.1 Automated ExtendScript Pipeline Pattern</h3>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Here is a battle-tested pattern for automating document batch processing without memory accumulation in ExtendScript:
+          </p>
+
+          <!-- Code Snippet Box -->
+          <div class="terminal-card" style="background: var(--panel-bg); border: 1px solid var(--panel-border); padding: 1.5rem; margin: 1.75rem 0;">
+            <div class="terminal-header" style="margin-bottom: 1rem;">
+              <span>JAVASCRIPT / EXTENDSCRIPT (ES3)</span>
+              <span style="color: var(--accent-amber); font-weight: 700;">batchExportPipeline.jsx</span>
+            </div>
+            <pre style="color: var(--text-main); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+// Open source file in headless/silent mode
+var doc = app.open(sourceFile);
+
+try {
+    // 1. Pre-flight sanity checks & layer unlocking
+    var totalArtboards = doc.artboards.length;
+    
+    // 2. Export multi-format payloads (EPS 10, SVG, JPEG)
+    exportEPS10(doc, outputFolder, baseName);
+    exportHighResJPEG(doc, outputFolder, baseName);
+} finally {
+    // 3. Mandatory cleanup: close document to flush memory
+    doc.close(SaveOptions.DONOTSAVECHANGES);
+    doc = null;
+}</pre>
+          </div>
+
+          <!-- Feature / Step List -->
+          <h3 style="font-size: 1.3rem; font-weight: 700; font-family: var(--font-mono); margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-main);">2.2 Critical Pre-Flight Checklist</h3>
+          <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
+            <li><strong>Text Expansion:</strong> Verify all typography is converted to outlines (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Ctrl+Shift+O</code> / <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Cmd+Shift+O</code>) to prevent font missing rejections.</li>
+            <li><strong>Path Hygiene:</strong> Eliminate zero-length paths, open outlines, and unpainted stray points.</li>
+            <li><strong>Color Space Integrity:</strong> Ensure swatches are strictly in RGB or CMYK per target marketplace specifications.</li>
+            <li><strong>Artboard Padding:</strong> Auto-fit canvas bounding box to prevent clipping delicate drop shadows or outer glow blurs.</li>
+          </ul>
+        </section>
+
+        <!-- Article Section 3: Reference Comparison Table -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">3. Marketplace Specifications Reference</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Quick reference matrix comparing technical requirements across primary microstock and agency platforms:
+          </p>
+
+          <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Platform</th>
+                  <th>Vector Standard</th>
+                  <th>Preview Dimensions</th>
+                  <th>ZIP Archive Rules</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Adobe Stock</strong></td>
+                  <td>AI or EPS 10 (Vector)</td>
+                  <td>Min 4MP / Max 100MP JPEG</td>
+                  <td>Optional individual ZIP</td>
+                </tr>
+                <tr>
+                  <td><strong>Shutterstock</strong></td>
+                  <td>Illustrator 10 EPS (RGB)</td>
+                  <td>Min 4MP JPEG preview</td>
+                  <td>Same base name (EPS + JPG)</td>
+                </tr>
+                <tr>
+                  <td><strong>Freepik</strong></td>
+                  <td>EPS 10 + AI compatible</td>
+                  <td>Min 2000px up to 8000px</td>
+                  <td>Separate paired archives</td>
+                </tr>
+                <tr>
+                  <td><strong>Envato / Elements</strong></td>
+                  <td>EPS 10, SVG, AI + layered PSD</td>
+                  <td>High-res 300 DPI preview</td>
+                  <td>Mandatory structured ZIP bundle</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- In-Content High-Intent Product Spotlight CTA -->
+        <section style="margin: 4rem 0;">
+          <div class="price-card featured" style="padding: 2.5rem; border: 2px solid var(--accent-amber); background: #fffdfa; box-shadow: var(--shadow-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+              <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3); margin-bottom: 0;">WORKFLOW AUTOMATION SPOTLIGHT</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--accent-green);">● PRODUCTION READY v3.2</span>
+            </div>
+            
+            <h3 style="font-size: 1.6rem; font-family: var(--font-mono); margin-bottom: 0.75rem; color: var(--text-main);">StockVector Exporter Pro</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">
+              Automate your entire export pipeline. Convert hundreds of complex Adobe Illustrator artwork files into EPS 10, SVG, Layered PSD, and marketplace-ready JPEG previews in a single automated pass—complete with auto-fit canvas bounds and instant zero-dependency ZIP bundling.
+            </p>
+
+            <ul class="feature-list" style="margin: 1.25rem 0 2rem 0;">
+              <li><strong>One-Click Multi-Format Export:</strong> Simultaneous EPS 10, SVG, PSD, PDF, and high-res JPEG previews.</li>
+              <li><strong>Zero Memory Leaks:</strong> Native ExtendScript document lifecycle ensures zero Illustrator slowdown on 500+ file batches.</li>
+              <li><strong>Smart Canvas Auto-Fitting:</strong> Auto-scales canvas bounds around artwork to prevent clipped effects or oversized borders.</li>
+              <li><strong>Instant Automated ZIP Packaging:</strong> Builds pristine ZIP packages with zero external compression tools required.</li>
+            </ul>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="../../stockvector-exporter-pro/" class="btn btn-primary" style="flex: 1; min-width: 240px; padding: 1rem 1.75rem;">EXPLORE STOCKVECTOR EXPORTER →</a>
+              <a href="../../" class="btn btn-secondary" style="flex: 1; min-width: 200px; padding: 1rem 1.75rem;">VIEW ALL ILLUSTRATOR SCRIPTS</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Summary & Next Steps -->
+        <section style="margin-top: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">4. Summary &amp; Recommended Best Practices</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Summarize key takeaways, optimization recommendations, and next steps for readers looking to streamline their vector production workflow.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Standard Suite Footer -->
+    <footer style="border-top: 1px solid var(--panel-border); padding-top: 2rem; margin-top: 5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+      <div style="margin-bottom: 1rem;">
+        <span style="font-family: var(--font-mono); font-weight: 700; color: var(--text-main);">COMMERCIAL &amp; CUSTOMER SUPPORT:</span> 
+        <span style="margin-left: 0.75rem;">Email: <a href="mailto:niloypal09@gmail.com" style="color: var(--accent-amber); text-decoration: none; font-weight: 600;">niloypal09@gmail.com</a></span> 
+        <span style="margin: 0 0.5rem;">•</span> 
+        <span>WhatsApp: <a href="https://wa.me/8801765647572" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">+880 176 564 7572</a></span>
+      </div>
+      <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
+        <a href="../" style="color: var(--accent-amber); text-decoration: none; font-weight: 600;">Articles &amp; Guides</a>
+        <span style="color: var(--panel-border);">|</span>
+        <a href="../../privacy/" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+        <span style="color: var(--panel-border);">|</span>
+        <a href="../../terms/" style="color: var(--text-muted); text-decoration: none;">Terms &amp; License</a>
+      </div>
+      <p>© 2026 Niloy // Illustrator Script Suite. Built for vector artists &amp; commercial stock producers worldwide.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
