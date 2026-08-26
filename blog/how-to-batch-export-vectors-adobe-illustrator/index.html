@@ -4,29 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Batch Export Vectors in Adobe Illustrator (Production Guide) // Niloy Scripts</title>
-  <meta name="description" content="Step-by-step production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, PSD &amp; JPEG without memory leaks or modal dialog hangs.">
+  <meta name="description" content="Production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, and JPEG without application crashes, missing font freezes, or clipped artboards.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nil4gh.github.io/nildevscripts/blog/how-to-batch-export-vectors-adobe-illustrator/">
   <meta name="theme-color" content="#0b1220">
-
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Niloy Illustrator Script Suite">
   <meta property="og:title" content="How to Batch Export Vectors in Adobe Illustrator (Production Guide) // Niloy Scripts">
-  <meta property="og:description" content="Step-by-step production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, PSD &amp; JPEG without memory leaks or modal dialog hangs.">
+  <meta property="og:description" content="Production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, and JPEG without application crashes, missing font freezes, or clipped artboards.">
   <meta property="og:url" content="https://nil4gh.github.io/nildevscripts/blog/how-to-batch-export-vectors-adobe-illustrator/">
   <meta property="og:image" content="https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png">
-  <meta property="article:published_time" content="2026-08-27">
-  <meta property="article:author" content="Niloy">
-  <meta property="article:section" content="BATCH AUTOMATION">
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Batch Export Vectors in Adobe Illustrator (Production Guide) // Niloy Scripts">
-  <meta name="twitter:description" content="Step-by-step production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, PSD &amp; JPEG without memory leaks or modal dialog hangs.">
+  <meta name="twitter:description" content="Production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, and JPEG without application crashes, missing font freezes, or clipped artboards.">
   <meta name="twitter:image" content="https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png">
-
-  <!-- Structured Data: BreadcrumbList & BlogPosting JSON-LD -->
+  <!-- Structured Data: BreadcrumbList + BlogPosting -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,21 +51,20 @@
       {
         "@type": "BlogPosting",
         "headline": "How to Batch Export Vectors in Adobe Illustrator: The Complete Production Guide",
-        "description": "Step-by-step production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, PSD & JPEG without memory leaks or modal dialog hangs.",
-        "url": "https://nil4gh.github.io/nildevscripts/blog/how-to-batch-export-vectors-adobe-illustrator/",
+        "description": "Production guide to batch exporting Adobe Illustrator files to EPS 10, SVG, and JPEG without application crashes, missing font freezes, or clipped artboards.",
         "image": "https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png",
-        "datePublished": "2026-08-27",
-        "dateModified": "2026-08-27",
         "author": {
           "@type": "Person",
           "name": "Niloy",
-          "url": "https://github.com/NiL4gh"
+          "jobTitle": "Illustrator Automation Specialist"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Niloy Illustrator Script Suite",
           "url": "https://nil4gh.github.io/nildevscripts/"
         },
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27",
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "https://nil4gh.github.io/nildevscripts/blog/how-to-batch-export-vectors-adobe-illustrator/"
@@ -80,10 +73,7 @@
     ]
   }
   </script>
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="../../styles/retro.css">
-
   <!-- Google Fonts: JetBrains Mono & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,7 +82,6 @@
 <body>
 
   <div class="container">
-    <!-- Header Brand Row -->
     <header>
       <div class="brand-row">
         <a href="../../" class="logo">
@@ -121,424 +110,212 @@
         <header class="article-hero" style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 2.75rem 2.5rem; border-radius: var(--radius-md); margin-bottom: 3.5rem; box-shadow: var(--shadow-md); position: relative;">
           <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3); margin-bottom: 1.25rem;">GUIDE // BATCH AUTOMATION</span>
           <h1 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -1.2px; margin-bottom: 1.25rem; line-height: 1.2; color: var(--text-main);">How to Batch Export Vectors in Adobe Illustrator: The Complete Production Guide</h1>
-          <p class="lead" style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2rem;">A deep technical guide on building reliable, headless batch export pipelines for Adobe Illustrator. Learn why native Actions fail at scale, how to manage ExtendScript memory lifecycles, dynamically auto-fit artboards, and export flawless EPS 10, SVG, PSD, and JPEG packages.</p>
+          <p class="lead" style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2rem;">A comprehensive technical guide for commercial vector contributors and digital product creators. Learn why native Actions fail in large production runs, how microstock and marketplace export specifications differ, and how to build a reliable batch workflow.</p>
 
           <!-- Author & Publication Metadata Bar -->
           <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--panel-border); padding-top: 1.25rem; font-family: var(--font-mono); font-size: 0.825rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem;">
             <div style="display: flex; align-items: center; gap: 0.6rem;">
               <span style="color: var(--accent-amber); font-weight: 800;">■</span>
-              <span>AUTHOR: <strong style="color: var(--text-main);">Niloy</strong> <span style="color: var(--text-muted); font-size: 0.775rem;">• Production Automation Specialist</span></span>
+              <span>AUTHOR: <strong style="color: var(--text-main);">Niloy</strong> <span style="color: var(--text-muted); font-size: 0.775rem;">• Illustrator Automation Specialist</span></span>
             </div>
             <div style="display: flex; align-items: center; gap: 1.25rem;">
               <span>DATE: <strong style="color: var(--text-main);">August 2026</strong></span>
               <span style="color: var(--panel-border);">|</span>
-              <span>READ TIME: <strong style="color: var(--accent-amber);">9 Min Read</strong></span>
+              <span>READ TIME: <strong style="color: var(--accent-amber);">8 Min Read</strong></span>
             </div>
           </div>
         </header>
 
         <!-- Section 1: The Production Bottleneck -->
         <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">1. Introduction: The High Cost of Manual Export Workflows</h2>
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">1. The Production Bottleneck in Vector Exporting</h2>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            If you produce commercial vector graphics—whether for microstock marketplaces (Adobe Stock, Shutterstock, Freepik, Vecteezy), digital asset stores (Creative Market, Envato Elements, GraphicRiver), or client design systems—exporting is often your single biggest time sink.
+            For professional vector artists, design studios, and microstock contributors, artwork creation is only half the battle. Once 50 or 100 vector illustrations or icon sets are designed, preparing them for commercial distribution is often an exhausting, repetitive chore.
           </p>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Consider a typical release batch of 50 vector illustrations or icon sets. For every individual asset, an author must:
+            When exporting a release batch manually, an artist must repeat a multi-step routine for every single file:
           </p>
           <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
-            <li>Open the master <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">.ai</code> source document.</li>
-            <li>Run pre-flight checks (outline live fonts, expand strokes, remove stray unpainted points).</li>
-            <li>Adjust the artboard dimensions to fit the artwork with consistent margins.</li>
-            <li>Navigate to <strong>File &gt; Save As</strong> to export a legacy <strong>EPS 10</strong> file with compatible PostScript options.</li>
-            <li>Navigate to <strong>File &gt; Export &gt; Export As</strong> to render a clean <strong>SVG 1.1</strong> and a multi-layered <strong>PSD</strong>.</li>
-            <li>Navigate to <strong>File &gt; Export &gt; Save for Web (Legacy)</strong> or <strong>Export As</strong> to render a high-resolution <strong>RGB JPEG preview</strong> (typically 4MP to 25MP).</li>
-            <li>Bundle the resulting files into an individual ZIP archive named to match marketplace submission guidelines.</li>
+            <li>Open the master <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">.ai</code> document in Adobe Illustrator.</li>
+            <li>Run pre-flight sanitation: outline live fonts, clean up stray anchor points, unlock hidden layers.</li>
+            <li>Re-center the artwork and fit the artboard with appropriate margins.</li>
+            <li>Export legacy <strong>EPS 10</strong> or save compatible vector payloads.</li>
+            <li>Render high-resolution <strong>RGB JPEG preview images</strong> (meeting platform megapixel requirements).</li>
+            <li>Package assets and rename files to match strict platform upload conventions.</li>
           </ul>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Performing this manual dance for 50 assets requires more than <strong>350 separate UI clicks and dialog interactions</strong>. For active contributors releasing 100 to 200 items per month, manual exports burn 15 to 30 productive design hours—while dramatically increasing the risk of rejected submissions due to inconsistent export flags.
+            For a modest release of 50 assets, this manual process demands over <strong>350 individual clicks and dialog confirmations</strong>, easily burning 2 to 3 hours of focused design time per batch.
           </p>
 
           <div class="terminal-card" style="margin: 2rem 0;">
             <div class="terminal-header">
-              <span>PRODUCTION METRIC // TIME ALLOCATION AUDIT</span>
-              <span style="color: var(--accent-amber); font-weight: 700;">● TIME IMPACT</span>
+              <span>WORKFLOW BENCHMARK // TIME ALLOCATION AUDIT</span>
+              <span style="color: var(--accent-amber); font-weight: 700;">● EFFICIENCY AUDIT</span>
             </div>
             <pre>
-[MANUAL BATCH COST]   50 items × 7 steps × 45s = 2.62 hours per batch
-[MONTHLY OVERHEAD]    4 batches/month = 10.5 hours wasted on repetitive UI clicks
-[AUTOMATED PIPELINE]  50 items batch processed in &lt; 90 seconds (100% headless)
-[SAVINGS RATIO]       ~98.5% reduction in non-billable export overhead
+[MANUAL EXPORT]   50 files × 6 steps × 35s = ~2.9 hours per batch
+[MONTHLY IMPACT]  4 batches/month = 11.6 hours lost on repetitive UI menus
+[AUTOMATION]      50 files processed, formatted &amp; packaged in &lt; 90 seconds
+[TIME SAVED]      Over 95% reduction in non-billable packaging overhead
             </pre>
           </div>
         </section>
 
         <!-- Section 2: Why Native Batch Actions Fail -->
         <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">2. Why Native Illustrator Batch Actions Fail at Scale</h2>
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">2. Why Native Illustrator Actions Fail in Large Batches</h2>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Adobe Illustrator includes a native <strong>Actions Panel</strong> with a <em>Batch...</em> command (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Actions Panel flyout &gt; Batch</code>). While this works for trivial single-document operations, it consistently breaks down when tasked with high-volume, multi-format vector exports.
+            Illustrator includes a built-in <strong>Actions Panel</strong> with a <em>Batch...</em> command (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Actions Panel flyout &gt; Batch</code>). While useful for simple tasks, relying on native Actions for heavy multi-format vector exports frequently causes severe production roadblocks:
           </p>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.1 Uncontrolled RAM Accumulation and Memory Leaks</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.1 RAM Accumulation and Application Crashes</h3>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Illustrator's C++ core maintains deep undo caches, raster scratch buffers, and font rasterization tables across active document lifecycles. When an Action loops through a folder of 100 complex vector files, memory released by <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Close</code> actions is often held by internal caches until the entire batch concludes.
-          </p>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            By document 40 or 50, Illustrator's memory footprint often swells beyond 8GB to 16GB, leading to sluggish rendering, scratch disk write stalls, and eventually unrecoverable application crashes (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Error: An out of memory error occurred</code>).
+            When an Illustrator Action iterates across dozens of complex vector files, memory allocated for undo caches, font tables, and raster scratch buffers is not always fully garbage-collected while the Action is active. As the batch progresses past 40 or 50 files, Illustrator's RAM footprint can balloon, resulting in sluggish performance or sudden crashes with "Out of Memory" errors.
           </p>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.2 Modal Dialog Hangs on Missing Fonts and Color Profiles</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.2 Unhandled Modal Dialog Freezes</h3>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Native Actions cannot intercept or suppress application-level warning modals. If a single file in a 200-item queue triggers any of the following alerts, the entire automated run freezes until a human manually clicks "OK":
+            Native Actions cannot automatically bypass or handle modal warning alerts. If a single document in a batch triggers a "Missing Font" alert, an "Embedded Color Profile Mismatch" prompt, or a "Legacy EPS Format Warning", Illustrator halts execution immediately and waits for human intervention. A batch meant to run unattended in the background stops dead on document 3.
           </p>
-          <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
-            <li><strong>Missing Font Dialog:</strong> Live text referencing an uninstalled type family.</li>
-            <li><strong>Embedded Profile Mismatch:</strong> Files created in sRGB vs Adobe RGB (1998) or CMYK US Web Coated (SWOP) v2.</li>
-            <li><strong>Legacy EPS Transparency Warnings:</strong> PostScript level flattening alerts during EPS 10 serialization.</li>
-            <li><strong>Legacy Format Save Warnings:</strong> Dialogs alerting the user that saving to legacy formats may disable editing capabilities.</li>
-          </ul>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.3 Static Canvas Bounds vs. Variable Asset Aspect Ratios</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">2.3 Static Canvas Bounds vs Dynamic Artwork Sizes</h3>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Native Actions record hardcoded canvas dimensions. If your action was recorded on a 2000×2000px square artboard, running it across a collection of rectangular badges (e.g. 1920×1080px) or panoramic banners will either clip outer glow effects and drop shadows or generate massive, unwanted white margins around the artwork.
+            Recorded Actions use static coordinates. If your artwork variations have differing aspect ratios or bounding boxes, native Actions cannot dynamically compute the artwork's outer bounds, resulting in clipped drop shadows or oversized, unbalanced margins in exported files.
           </p>
         </section>
 
-        <!-- Section 3: The Multi-Format Matrix -->
+        <!-- Section 3: Understanding Marketplace Export Specifications -->
         <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">3. Marketplace Specifications: The Multi-Format Export Matrix</h2>
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">3. Understanding Marketplace Export Specifications</h2>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Different commercial agencies and stock distribution networks require distinct file formats, compatibility levels, and archive packaging structures. A production-grade export pipeline must generate the full matrix of deliverable assets simultaneously.
+            One of the biggest pitfalls for vector contributors is confusing <strong>microstock agency requirements</strong> with <strong>digital marketplace product bundle formats</strong>. Each channel enforces distinct file formats, preview dimensions, and packaging rules:
           </p>
 
-          <div style="overflow-x: auto; margin: 1.75rem 0 2rem 0;">
-            <table class="comparison-table">
+          <div style="overflow-x: auto; margin: 2rem 0;">
+            <table class="comparison-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
               <thead>
-                <tr>
-                  <th>Platform / Channel</th>
-                  <th>Primary Vector Format</th>
-                  <th>Compatibility Preset</th>
-                  <th>Raster Preview Spec</th>
-                  <th>Archive Packaging</th>
+                <tr style="background: var(--code-bg); text-align: left;">
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Channel / Platform</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Primary Vector Format</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Preview Requirement</th>
+                  <th style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Packaging Structure</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Adobe Stock</strong></td>
-                  <td>AI / EPS 10</td>
-                  <td>Illustrator 10 EPS (RGB)</td>
-                  <td>Min 4MP (e.g. 5000×3333px)</td>
-                  <td>Individual ZIP or paired JPG</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Adobe Stock</strong></td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">AI (CS6+) or EPS 10 (&lt; 45 MB)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Standalone JPEG (4 MP – 100 MP, RGB)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Loose files with matching base filenames</td>
                 </tr>
                 <tr>
-                  <td><strong>Shutterstock</strong></td>
-                  <td>EPS 10 Vector</td>
-                  <td>PostScript Level 2/3 (RGB)</td>
-                  <td>Min 4MP to 25MP JPEG</td>
-                  <td>Exact base name matching</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Shutterstock</strong></td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">EPS 10 or EPS 8 (&lt; 100 MB)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Matching JPEG (4 MP – 25 MP, RGB)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Paired EPS + JPEG in same folder</td>
                 </tr>
                 <tr>
-                  <td><strong>Freepik</strong></td>
-                  <td>EPS 10 + AI Master</td>
-                  <td>Legacy EPS 10 / RGB</td>
-                  <td>Min 2000px up to 8000px JPG</td>
-                  <td>Paired EPS + JPG per asset</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Freepik</strong></td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">EPS 10 (Sanitized filename)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">JPEG preview (2000px – 8000px edge, RGB)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Identical base filenames (lowercase, hyphens)</td>
                 </tr>
                 <tr>
-                  <td><strong>Creative Market</strong></td>
-                  <td>AI, EPS 10, SVG, PSD</td>
-                  <td>Multi-format layered bundle</td>
-                  <td>1820×1214px display cards</td>
-                  <td>Structured ZIP with folders</td>
-                </tr>
-                <tr>
-                  <td><strong>Envato Elements</strong></td>
-                  <td>EPS 10, SVG 1.1, PSD</td>
-                  <td>Clean SVG Tiny / EPS 10</td>
-                  <td>High-res 300 DPI preview</td>
-                  <td>Comprehensive ZIP archive</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);"><strong>Creative Market / Gumroad</strong></td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Multi-format (AI, EPS, SVG, PDF, PSD)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">High-res presentation cards (1820×1214px)</td>
+                  <td style="padding: 0.85rem 1rem; border: 1px solid var(--panel-border);">Individual ZIP bundle per product</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">3.1 Key Export Configuration Standards</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">3.1 Key Microstock Rules</h3>
           <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
-            <li><strong>EPS 10 Standard:</strong> Must specify <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Compatibility.ILLUSTRATOR10</code>, PostScript Level 2 or 3, embedded fonts (or outlined text), and High-Resolution raster/vector balance (100% vector preference).</li>
-            <li><strong>SVG 1.1 Profile:</strong> Must specify <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">SVGDocumentEncoding.UTF8</code>, CSS internal styling, presentation attributes enabled, and responsive <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">viewBox</code> coordinates without hardcoded viewport clipping.</li>
-            <li><strong>Layered PSD Export:</strong> Must preserve vector layers, maximum editability, antialiasing flags, and 300 DPI resolution without collapsing sub-layer hierarchies.</li>
-            <li><strong>JPEG Previews:</strong> Rendered in RGB color space at high quality (Quality: 8 to 10) with anti-aliasing set to <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">AntiAliasingMethod.ARTOPTIMIZED</code> for crisp lines and smooth curves.</li>
+            <li><strong>EPS 10 Compatibility:</strong> Fonts must be outlined (<code style="font-family: var(--font-mono);">Ctrl+Shift+O</code> / <code style="font-family: var(--font-mono);">Cmd+Shift+O</code>), transparency set to High Resolution flattener preset, and color mode strictly set to RGB.</li>
+            <li><strong>Megapixel Compliance:</strong> Microstock preview JPEGs are measured in total megapixels (Width × Height in pixels). A 2000×2000px image equals 4.0 Megapixels, satisfying the minimum threshold.</li>
+            <li><strong>Filename Pairing:</strong> Vector files and their companion raster thumbnails must share the exact same base filename (e.g. <code style="font-family: var(--font-mono);">autumn-leaf-01.eps</code> and <code style="font-family: var(--font-mono);">autumn-leaf-01.jpg</code>).</li>
           </ul>
         </section>
 
-        <!-- Section 4: Architecting ExtendScript Pipeline -->
+        <!-- Section 4: What Makes a Professional Batch Pipeline -->
         <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">4. Architecting a Robust ExtendScript (ES3) Batch Pipeline</h2>
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">4. Core Requirements for a Production-Grade Batch Workflow</h2>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            To overcome the fundamental limitations of native Actions, we turn to Adobe Illustrator's native scripting engine: <strong>ExtendScript (ECMAScript 3)</strong>. A production-ready ExtendScript pipeline executes programmatically, suppresses modal dialogs, dynamically calculates bounding boxes, and strictly manages memory allocation.
+            To achieve reliable, hands-off batch exporting across large asset catalogs, an automated workflow must address three foundational requirements:
           </p>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">4.1 The Sequential Execution &amp; Garbage Collection Pattern</h3>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            The golden rule of ExtendScript automation is <strong>strict sequential isolation</strong>: never open multiple documents concurrently in a batch loop. Always process a single document, export all required format payloads, close the document with <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">SaveOptions.DONOTSAVECHANGES</code> inside a <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">finally</code> block, and nullify object references.
-          </p>
-
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">4.2 Dynamic Canvas Auto-Fitting Mathematics</h3>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            In Illustrator ExtendScript, artboard coordinates are defined as a 4-element array: <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">[left, top, right, bottom]</code>, where <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">top</code> is positive and <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">bottom</code> is negative in Illustrator's Cartesian space.
-          </p>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Using <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">doc.visibleBounds</code> captures the cumulative outer bounds of all artwork elements, including stroke weights, drop shadow blurs, and outer glow rasters. We can dynamically pad these bounds to fit artboards with precision:
-          </p>
-
-          <!-- Code Snippet: Auto-Fitting Math -->
-          <div class="terminal-card" style="background: var(--panel-bg); border: 1px solid var(--panel-border); padding: 1.5rem; margin: 1.75rem 0;">
-            <div class="terminal-header" style="margin-bottom: 1rem;">
-              <span>EXTENDSCRIPT (ES3) // CANVAS AUTO-FIT CALCULATOR</span>
-              <span style="color: var(--accent-amber); font-weight: 700;">fitArtboardToBounds.jsx</span>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+            <div style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 1.5rem; border-radius: var(--radius-md);">
+              <span style="color: var(--accent-amber); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">PRINCIPLE 01</span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0.5rem 0; color: var(--text-main);">Sequential Document Lifecycle</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">Opening, processing, exporting, and closing documents one-by-one ensures that RAM is released cleanly after every single file, preventing memory exhaustion on 100+ file batches.</p>
             </div>
-            <pre style="color: var(--text-main); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
-// Calculate visible bounding box across all active page items
-function autoFitArtboard(doc, paddingPoints) {
-    if (doc.pageItems.length === 0) return;
-
-    var minX = Infinity, maxY = -Infinity, maxX = -Infinity, minY = Infinity;
-
-    for (var i = 0; i &lt; doc.pageItems.length; i++) {
-        var item = doc.pageItems[i];
-        if (item.guides || item.hidden || item.locked) continue;
-
-        // visibleBounds returns [left, top, right, bottom] including strokes
-        var bounds = item.visibleBounds;
-        if (bounds[0] &lt; minX) minX = bounds[0];
-        if (bounds[1] &gt; maxY) maxY = bounds[1];
-        if (bounds[2] &gt; maxX) maxX = bounds[2];
-        if (bounds[3] &lt; minY) minY = bounds[3];
-    }
-
-    if (minX !== Infinity) {
-        // Apply uniform padding margin around artwork
-        var pad = paddingPoints || 20;
-        doc.artboards[0].artboardRect = [
-            minX - pad,
-            maxY + pad,
-            maxX + pad,
-            minY - pad
-        ];
-    }
-}</pre>
-          </div>
-
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">4.3 Production Batch Pipeline Implementation</h3>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Below is a complete, battle-tested ExtendScript implementation illustrating silent warning suppression, EPS 10 export options, JPEG rasterization, and leak-free document lifecycle cleanup:
-          </p>
-
-          <!-- Code Snippet: Full Batch Pipeline -->
-          <div class="terminal-card" style="background: var(--panel-bg); border: 1px solid var(--panel-border); padding: 1.5rem; margin: 1.75rem 0;">
-            <div class="terminal-header" style="margin-bottom: 1rem;">
-              <span>EXTENDSCRIPT (ES3) // HEADLESS BATCH PROCESSOR</span>
-              <span style="color: var(--accent-green); font-weight: 700;">productionBatchEngine.jsx</span>
+            <div style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 1.5rem; border-radius: var(--radius-md);">
+              <span style="color: var(--accent-amber); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">PRINCIPLE 02</span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0.5rem 0; color: var(--text-main);">Silent Alert Suppression</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">Interactive modal popups (missing fonts, profile mismatches, legacy save alerts) must be suppressed so the batch continues without requiring human clicks.</p>
             </div>
-            <pre style="color: var(--text-main); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
-#target illustrator
-
-function runBatchExportPipeline(inputFolder, outputFolder) {
-    // 1. Suppress all modal warnings to prevent batch freezing
-    var previousInteractionLevel = app.userInteractionLevel;
-    app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
-
-    var sourceFiles = inputFolder.getFiles("*.ai");
-    var totalFiles = sourceFiles.length;
-    var successCount = 0;
-
-    try {
-        for (var i = 0; i &lt; totalFiles; i++) {
-            var file = sourceFiles[i];
-            if (!(file instanceof File)) continue;
-
-            var baseName = file.name.replace(/\.[^\.]+$/, "");
-            var doc = null;
-
-            try {
-                // 2. Open document silently
-                doc = app.open(file);
-
-                // 3. Pre-flight: Unlock layers and fit artboard
-                unlockAllLayers(doc);
-                autoFitArtboard(doc, 20);
-
-                // 4. Export EPS 10 payload
-                exportEPS10(doc, outputFolder, baseName);
-
-                // 5. Export High-Res RGB JPEG preview (5000px wide)
-                exportJPEGPreview(doc, outputFolder, baseName, 5000);
-
-                successCount++;
-            } catch (err) {
-                $.writeln("[ERROR] Failed on file " + file.name + ": " + err.message);
-            } finally {
-                // 6. Mandatory memory flush: close without saving
-                if (doc !== null) {
-                    doc.close(SaveOptions.DONOTSAVECHANGES);
-                    doc = null;
-                }
-            }
-        }
-    } finally {
-        // Restore user alert level
-        app.userInteractionLevel = previousInteractionLevel;
-    }
-
-    alert("Batch Complete: " + successCount + " of " + totalFiles + " files exported successfully.");
-}
-
-function exportEPS10(doc, folder, baseName) {
-    var epsFile = new File(folder.fsName + "/" + baseName + ".eps");
-    var epsOpts = new EPSSaveOptions();
-    epsOpts.compatibility = Compatibility.ILLUSTRATOR10;
-    epsOpts.cmykPostScript = (doc.documentColorSpace === DocumentColorSpace.CMYK);
-    epsOpts.embedAllFonts = true;
-    epsOpts.includeDocumentThumbnails = true;
-    epsOpts.postScript = EPSPostScriptLevelEnum.LEVEL3;
-    epsOpts.saveMultipleArtboards = false;
-    doc.saveAs(epsFile, epsOpts);
-}
-
-function exportJPEGPreview(doc, folder, baseName, targetWidthPx) {
-    var jpgFile = new File(folder.fsName + "/" + baseName + ".jpg");
-    var jpgOpts = new ExportOptionsJPEG();
-    jpgOpts.antiAliasing = true;
-    jpgOpts.artBoardClipping = true;
-    jpgOpts.qualitySetting = 100;
-    
-    // Calculate scaling ratio based on current artboard width
-    var currentWidth = doc.artboards[0].artboardRect[2] - doc.artboards[0].artboardRect[0];
-    if (currentWidth &gt; 0 &amp;&amp; targetWidthPx) {
-        jpgOpts.horizontalScale = (targetWidthPx / currentWidth) * 100;
-        jpgOpts.verticalScale = jpgOpts.horizontalScale;
-    }
-    
-    doc.exportFile(jpgFile, ExportType.JPEG, jpgOpts);
-}
-
-function unlockAllLayers(doc) {
-    for (var i = 0; i &lt; doc.layers.length; i++) {
-        doc.layers[i].locked = false;
-        doc.layers[i].visible = true;
-    }
-}</pre>
+            <div style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 1.5rem; border-radius: var(--radius-md);">
+              <span style="color: var(--accent-amber); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">PRINCIPLE 03</span>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0.5rem 0; color: var(--text-main);">Dynamic Canvas Auto-Fitting</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">Artboard boundaries must automatically recalculate to enclose artwork visible bounds (including stroke widths and raster blurs) with consistent point padding.</p>
+            </div>
           </div>
         </section>
 
-        <!-- Section 5: Zero-Dependency ZIP Bundling -->
+        <!-- Section 5: The Turnkey Solution (StockVector Exporter Pro) -->
         <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">5. Automated ZIP Bundling Without External Software</h2>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Exporting loose files into a directory is only half the job. Most major marketplaces (Envato, Creative Market, Design Bundles) require upload payloads to be packaged into standalone, self-contained ZIP archives containing the vector master, preview graphic, and license documentation.
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">5. The Turnkey Solution: StockVector Exporter Pro</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Rather than dealing with the limitations of native Actions or manually clicking through hundreds of export dialogs, professional vector artists use <strong>StockVector Exporter Pro</strong>—the dedicated batch automation workstation for Adobe Illustrator.
           </p>
 
-          <h3 style="font-size: 1.25rem; font-weight: 700; font-family: var(--font-mono); margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--text-main);">5.1 The ExtendScript Compression Challenge</h3>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Because ExtendScript is sandboxed and lacks native zip compression APIs, production automation tools bridge to OS-native utilities:
-          </p>
-          <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
-            <li><strong>macOS:</strong> Shelling out to native <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">/usr/bin/zip</code> or <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">/usr/bin/ditto -c -k</code> via temporary executable scripts.</li>
-            <li><strong>Windows:</strong> Calling native <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">tar.exe -a -c -f bundle.zip</code> (available in all modern Windows 10/11 builds) or PowerShell's <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Compress-Archive</code>.</li>
-          </ul>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            By automating this step directly inside the post-export loop, each vector asset is packaged into a pristine, customer-ready archive seconds after Illustrator finishes writing the EPS and preview JPEG.
-          </p>
-        </section>
-
-        <!-- Section 6: Pre-Flight Checklist -->
-        <section style="margin-bottom: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">6. Essential Pre-Flight Checklist Before Batch Exporting</h2>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Before initiating a multi-hundred-file automated run, verify that your artwork library meets these strict pre-flight standards to eliminate marketplace rejections:
-          </p>
-
-          <div style="background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: var(--radius-md); padding: 1.75rem 2rem; margin: 1.5rem 0;">
-            <ul style="color: var(--text-main); line-height: 2; font-size: 0.95rem; list-style-type: none;">
-              <li style="display: flex; align-items: baseline; gap: 0.75rem;">
-                <span style="color: var(--accent-green); font-weight: 800;">✓</span>
-                <span><strong>Font Outlining:</strong> Convert all text objects (<code style="font-family: var(--font-mono); font-size: 0.85em;">Ctrl+Shift+O</code> / <code style="font-family: var(--font-mono); font-size: 0.85em;">Cmd+Shift+O</code>) to prevent font missing rejections.</span>
-              </li>
-              <li style="display: flex; align-items: baseline; gap: 0.75rem;">
-                <span style="color: var(--accent-green); font-weight: 800;">✓</span>
-                <span><strong>Stray Point Cleanup:</strong> Execute <em>Object &gt; Path &gt; Clean Up...</em> to purge unpainted path points and empty text containers.</span>
-              </li>
-              <li style="display: flex; align-items: baseline; gap: 0.75rem;">
-                <span style="color: var(--accent-green); font-weight: 800;">✓</span>
-                <span><strong>Stroke Expansion:</strong> For icons and UI kits, expand strokes to filled paths to ensure scaling consistency across vector editing tools.</span>
-              </li>
-              <li style="display: flex; align-items: baseline; gap: 0.75rem;">
-                <span style="color: var(--accent-green); font-weight: 800;">✓</span>
-                <span><strong>Color Space Normalization:</strong> Align document color mode (RGB vs CMYK) with target platform requirements (RGB for Shutterstock/Adobe Stock digital vectors).</span>
-              </li>
-              <li style="display: flex; align-items: baseline; gap: 0.75rem;">
-                <span style="color: var(--accent-green); font-weight: 800;">✓</span>
-                <span><strong>Layer Lock Release:</strong> Ensure background layers and clipping masks are unlocked so the automated script can access all bounding items.</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- In-Content High-Intent Product Spotlight CTA -->
-        <section style="margin: 4.5rem 0;">
-          <div class="price-card featured" style="padding: 2.5rem; border: 2px solid var(--accent-amber); background: #fffdfa; box-shadow: var(--shadow-md);">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
-              <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3); margin-bottom: 0;">PRODUCTION WORKFLOW SOLUTION</span>
-              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--accent-green);">● PRODUCTION READY v3.2</span>
-            </div>
-            
-            <h3 style="font-size: 1.6rem; font-family: var(--font-mono); margin-bottom: 0.75rem; color: var(--text-main);">StockVector Exporter Pro v3.2</h3>
+          <!-- Product CTA Card -->
+          <div style="border: 2px solid var(--accent-amber); background: #fffdfa; padding: 2.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); position: relative;">
+            <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3);">RECOMMENDED PRODUCTION TOOL</span>
+            <h3 style="font-size: 1.6rem; font-weight: 800; margin: 0.75rem 0 1rem 0; color: var(--text-main);">StockVector Exporter Pro v3.2</h3>
             <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">
-              Tired of writing and maintaining custom ExtendScript routines? <strong>StockVector Exporter Pro</strong> provides an industrial-grade, dockable panel that automates your entire batch export, auto-fitting, watermarking, and ZIP packaging workflow with zero code.
+              Industrial-grade batch vector exporter, stock pre-flight engine, auto-fit canvas scaler, and native multi-format ZIP packaging system. One-click presets for Shutterstock, Adobe Stock, Freepik, and digital marketplaces.
             </p>
-
-            <ul class="feature-list" style="margin: 1.25rem 0 2rem 0;">
-              <li><strong>Simultaneous Multi-Format Exports:</strong> One-click batch rendering to EPS 10, SVG 1.1, Layered PSD, PDF, and high-res JPEG previews.</li>
-              <li><strong>Leak-Free Sequential Engine:</strong> Processes batches of 500+ complex vector files without RAM bloat or Illustrator slowdowns.</li>
-              <li><strong>Smart Canvas Auto-Fitting:</strong> Dynamically calculates visible artwork bounds and applies customizable pixel padding.</li>
-              <li><strong>Zero-Dependency ZIP Packaging:</strong> Automatically bundles each exported vector asset into a standalone archive on macOS and Windows.</li>
-              <li><strong>Integrated Marketplace Presets:</strong> Pre-configured 1-click profiles for Adobe Stock, Shutterstock, Freepik, and Creative Market.</li>
-            </ul>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> Zero RAM Leaks (Sequential Engine)
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> Smart Auto-Fit Canvas (Zero Clipping)
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> Automated Stock Pre-Flight Checks
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> 100% Native (No External Binaries)
+              </div>
+            </div>
 
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="../../stockvector-exporter-pro/" class="btn btn-primary" style="flex: 1; min-width: 240px; padding: 1rem 1.75rem;">EXPLORE STOCKVECTOR EXPORTER PRO →</a>
-              <a href="../../" class="btn btn-secondary" style="flex: 1; min-width: 200px; padding: 1rem 1.75rem;">VIEW ALL ILLUSTRATOR SCRIPTS</a>
+              <a href="../../stockvector-exporter-pro/" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.75rem 1.5rem;">EXPLORE TOOL &amp; PRICING — $19</a>
+              <a href="../../stockvector-exporter-pro/downloads/StockVector-Exporter-Pro-v3.2-Free.zip" download class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.75rem 1.5rem; border-color: var(--accent-amber); color: var(--text-main);">⬇ DOWNLOAD FREE EVALUATION (.ZIP)</a>
             </div>
           </div>
-        </section>
-
-        <!-- Section 7: Summary & Conclusion -->
-        <section style="margin-top: 3.5rem;">
-          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">7. Conclusion &amp; Next Steps</h2>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Automating vector export workflows in Adobe Illustrator isn't just about saving time—it's about eliminating human error and ensuring 100% technical consistency across every single asset in your commercial catalog.
-          </p>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
-            Whether you maintain your own custom ExtendScript pipeline using the patterns provided in this guide or deploy a turnkey solution like <a href="../../stockvector-exporter-pro/" style="color: var(--accent-amber); font-weight: 600; text-decoration: none;">StockVector Exporter Pro</a>, investing in automated batch exports pays for itself in your first 100 processed assets.
-          </p>
         </section>
       </article>
     </main>
 
     <!-- Standard Suite Footer -->
-    <footer style="border-top: 1px solid var(--panel-border); padding-top: 2rem; margin-top: 5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
-      <div style="margin-bottom: 1rem;">
+    <footer style="border-top: 1px solid var(--panel-border); padding-top: 2rem; margin-top: 4rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+      <div style="margin-bottom: 0.75rem;">
         <span style="font-family: var(--font-mono); font-weight: 700; color: var(--text-main);">COMMERCIAL &amp; CUSTOMER SUPPORT:</span> 
         <span style="margin-left: 0.75rem;">Email: <a href="mailto:niloypal09@gmail.com" style="color: var(--accent-amber); text-decoration: none; font-weight: 600;">niloypal09@gmail.com</a></span> 
         <span style="margin: 0 0.5rem;">•</span> 
         <span>WhatsApp: <a href="https://wa.me/8801765647572" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">+880 176 564 7572</a></span>
       </div>
-      <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
-        <a href="../" style="color: var(--accent-amber); text-decoration: none; font-weight: 600;">Articles &amp; Guides</a>
-        <span style="color: var(--panel-border);">|</span>
+      <div style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.8rem;">
+        <a href="../" style="color: var(--text-muted); text-decoration: none;">Articles &amp; Guides</a>
+        <span style="margin: 0 0.5rem;">•</span>
         <a href="../../privacy/" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
-        <span style="color: var(--panel-border);">|</span>
+        <span style="margin: 0 0.5rem;">•</span>
         <a href="../../terms/" style="color: var(--text-muted); text-decoration: none;">Terms &amp; License</a>
       </div>
       <p>© 2026 Niloy // Illustrator Script Suite. Built for vector artists &amp; commercial stock producers worldwide.</p>
