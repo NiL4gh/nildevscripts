@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="StockVector Exporter Pro">
+  <!-- Single flat glyph: export arrow rising out of a tray, tipping into a stock sparkle.
+       Solid amber on a transparent background so it reads on any light/dark surface. -->
+
+  <!-- Tray (base) -->
+  <rect x="150" y="352" width="212" height="40" rx="20" fill="#d97706"/>
+
+  <!-- Up-arrow shaft -->
+  <rect x="239" y="196" width="34" height="156" fill="#d97706"/>
+
+  <!-- Up-arrow head (chevron) -->
+  <path d="M 256 96 L 200 196 L 312 196 Z" fill="#d97706"/>
+
+  <!-- Stock sparkle -->
+  <path d="M 348 96 L 354 112 L 370 118 L 354 124 L 348 140 L 342 124 L 326 118 L 342 112 Z" fill="#d97706"/>
+</svg>
