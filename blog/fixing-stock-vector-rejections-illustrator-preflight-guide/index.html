@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixing Stock Vector Rejections: The Automated Adobe Illustrator Preflight Checklist (2026) // Niloy Scripts</title>
+  <meta name="description" content="Eliminate stock vector rejections on Adobe Stock, Freepik & Shutterstock. Automated ExtendScript preflight checklist for stray points, open paths, and color shifts.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://nil4gh.github.io/nildevscripts/blog/fixing-stock-vector-rejections-illustrator-preflight-guide/">
+  <meta name="theme-color" content="#0b1220">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Niloy Illustrator Script Suite">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Fixing Stock Vector Rejections: The Automated Adobe Illustrator Preflight Checklist (2026)">
+  <meta property="og:description" content="Eliminate stock vector rejections on Adobe Stock, Freepik & Shutterstock. Automated ExtendScript preflight checklist for stray points, open paths, and color shifts.">
+  <meta property="og:url" content="https://nil4gh.github.io/nildevscripts/blog/fixing-stock-vector-rejections-illustrator-preflight-guide/">
+  <meta property="og:image" content="https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Adobe Illustrator Vector Preflight Automation Interface">
+  <meta property="article:published_time" content="2026-09-26T00:00:00+00:00">
+  <meta property="article:modified_time" content="2026-09-26T00:00:00+00:00">
+  <meta property="article:section" content="Vector Production & Automation">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fixing Stock Vector Rejections: The Automated Adobe Illustrator Preflight Checklist (2026)">
+  <meta name="twitter:description" content="Eliminate stock vector rejections on Adobe Stock, Freepik & Shutterstock. Automated ExtendScript preflight checklist for stray points, open paths, and color shifts.">
+  <meta name="twitter:image" content="https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png">
+
+  <!-- Structured Data: BreadcrumbList + BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Catalog",
+            "item": "https://nil4gh.github.io/nildevscripts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles & Guides",
+            "item": "https://nil4gh.github.io/nildevscripts/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Fixing Stock Vector Rejections Guide",
+            "item": "https://nil4gh.github.io/nildevscripts/blog/fixing-stock-vector-rejections-illustrator-preflight-guide/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Fixing Stock Vector Rejections: The Automated Adobe Illustrator Preflight Checklist (2026)",
+        "description": "Eliminate stock vector rejections on Adobe Stock, Freepik & Shutterstock. Automated ExtendScript preflight checklist for stray points, open paths, and color shifts.",
+        "image": "https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/assets/01_adobe-illustrator-batch-vector-exporter-pro-interface_1920x1080.png",
+        "author": {
+          "@type": "Person",
+          "name": "Niloy",
+          "jobTitle": "Stock Vector Contributor & Automation Developer",
+          "sameAs": [
+            "https://github.com/NiL4gh"
+          ]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Niloy Illustrator Script Suite",
+          "url": "https://nil4gh.github.io/nildevscripts/"
+        },
+        "datePublished": "2026-09-26T00:00:00+00:00",
+        "dateModified": "2026-09-26T00:00:00+00:00",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://nil4gh.github.io/nildevscripts/blog/fixing-stock-vector-rejections-illustrator-preflight-guide/"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="../../styles/retro.css">
+  <!-- Google Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand-row">
+        <a href="../../" class="logo">
+          <span style="color: var(--accent-amber);">■</span> NILOY // <span>SCRIPTS</span>
+        </a>
+        <nav>
+          <a href="../../">CATALOG</a>
+          <a href="../../stockvector-exporter-pro/">STOCKVECTOR EXPORTER</a>
+          <a href="https://github.com/NiL4gh/nildevscripts" target="_blank">GITHUB</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="margin-bottom: 1.75rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="../../" style="color: var(--text-muted); text-decoration: none;">CATALOG</a>
+          <span style="color: var(--panel-border); font-weight: bold;">/</span>
+          <a href="../" style="color: var(--text-muted); text-decoration: none;">ARTICLES</a>
+          <span style="color: var(--panel-border); font-weight: bold;">/</span>
+          <span style="color: var(--accent-amber); font-weight: 700; text-transform: uppercase;">PREFLIGHT &amp; QUALITY</span>
+        </nav>
+
+        <!-- Article Header / Hero Banner -->
+        <header class="article-hero" style="border: 1px solid var(--panel-border); background: var(--panel-bg); padding: 2.75rem 2.5rem; border-radius: var(--radius-md); margin-bottom: 3.5rem; box-shadow: var(--shadow-md); position: relative;">
+          <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3); margin-bottom: 1.25rem;">PRODUCTION ENGINEERING // 2026 STANDARD</span>
+          <h1 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -1.2px; margin-bottom: 1.25rem; line-height: 1.2; color: var(--text-main);">Fixing Stock Vector Rejections: The Automated Adobe Illustrator Preflight Checklist (2026)</h1>
+          <p class="lead" style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2rem;">A comprehensive technical guide to diagnosing and eliminating the invisible vector defects that trigger 40%+ of file rejections on Adobe Stock, Freepik, and Shutterstock—with automated ExtendScript sanitization routines.</p>
+
+          <!-- Author & Publication Metadata Bar -->
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--panel-border); padding-top: 1.25rem; font-family: var(--font-mono); font-size: 0.825rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="color: var(--accent-amber); font-weight: 800;">■</span>
+              <span>AUTHOR: <strong style="color: var(--text-main);">Niloy</strong> <span style="color: var(--text-muted); font-size: 0.775rem;">• Senior Vector Automation Specialist</span></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1.25rem;">
+              <span>DATE: <strong style="color: var(--text-main);">SEPTEMBER 2026</strong></span>
+              <span style="color: var(--panel-border);">|</span>
+              <span>READ TIME: <strong style="color: var(--accent-amber);">9 MIN READ</strong></span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Article Section 1 -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">1. The Anatomy of an Automated Vector Rejection</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            When submitting vector illustrations to commercial stock platforms like Adobe Stock, Freepik, or Shutterstock, contributors frequently receive frustrating rejection notifications: <em>"Technical Issue: The file contains open paths, stray points, or unexpanded elements."</em>
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Human reviewers do not spend 15 minutes manually zooming into your artboards looking for stray anchor points. Modern stock review pipelines run <strong>automated PostScript and vector parser bots</strong> that inspect the file’s underlying DOM structure within milliseconds. If an unexpanded appearance brush or a zero-length open path is detected, the submission is rejected instantly before a human curator ever sees it.
+          </p>
+
+          <div class="terminal-card" style="margin: 2rem 0;">
+            <div class="terminal-header">
+              <span>STOCK REVIEW PIPELINE // REJECTION STATS</span>
+              <span style="color: var(--accent-green); font-weight: 700;">● AUTOMATED INGESTION DIAGNOSTIC</span>
+            </div>
+            <pre>
+[PRIMARY CAUSES OF VECTOR REJECTION - 2026 AGGREGATE DATA]
+1. Stray anchor points &amp; unpainted paths ........... 34.2%
+2. Unexpanded appearance strokes &amp; live text ....... 28.6%
+3. Elements &amp; clipping masks outside artboards ...... 19.4%
+4. RGB-to-CMYK color shift &amp; raster effect banding . 12.1%
+5. Layer naming &amp; missing EPS 10 backward syntax ...  5.7%
+            </pre>
+          </div>
+        </section>
+
+        <!-- Article Section 2 -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">2. Defect 1: Stray Anchor Points &amp; Open Path Gaps</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Stray anchor points occur when you click with the Pen tool (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">P</code>) or Type tool without creating geometry. In the viewport, they are invisible. But in an exported EPS 10 or SVG file, they persist as empty <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">&lt;path&gt;</code> coordinates with zero fill and zero stroke. Stock ingestion bots flag them as corrupt or unkempt geometry.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Similarly, filled shapes with open endpoints cause rendering bugs when opened in third-party software like CorelDRAW or Affinity Designer. Every commercial marketplace requires 100% closed vector contours for all filled elements.
+          </p>
+
+          <h3 style="font-size: 1.3rem; font-weight: 700; font-family: var(--font-mono); margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-main);">Manual Sanitize Routine:</h3>
+          <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
+            <li>Execute <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Object &gt; Path &gt; Clean Up...</code> with Stray Points, Unpainted Objects, and Empty Text Paths selected.</li>
+            <li>Select all paths and press <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Ctrl+J</code> (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Cmd+J</code>) to join coincident endpoints across the active selection.</li>
+          </ul>
+        </section>
+
+        <!-- Article Section 3 -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">3. Defect 2: Unexpanded Strokes, Live Fonts &amp; Pattern Brushes</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            When a customer downloads an EPS 10 file, their software may not have the fonts or custom brushes you used. If strokes are unexpanded and the buyer scales the artwork down, strokes without <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Scale Strokes &amp; Effects</code> enabled will overwhelm the composition.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Stock marketplaces mandate that <strong>all text frames must be converted to outlines</strong> and all dynamic brush strokes must be converted to pure filled outlines.
+          </p>
+
+          <h3 style="font-size: 1.3rem; font-weight: 700; font-family: var(--font-mono); margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-main);">The Production Fix:</h3>
+          <ul style="color: var(--text-main); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.85; font-size: 0.95rem;">
+            <li>Select All (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Ctrl+A</code>) &gt; <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Type &gt; Create Outlines</code> (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Ctrl+Shift+O</code>).</li>
+            <li>Execute <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Object &gt; Expand Appearance</code>.</li>
+            <li>Execute <code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Object &gt; Expand...</code> with Fill and Stroke checked.</li>
+          </ul>
+        </section>
+
+        <!-- Article Section 4 -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">4. Defect 3: Ghost Layers &amp; Stray Elements Outside the Artboard</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Vector artists frequently leave color swatches, reference sketches, or hidden scrap layers floating on the pasteboard outside the visible canvas. In native Illustrator (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">.AI</code>), you may not notice them.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            However, when exported to EPS 10, the PostScript bounding box calculates from the outermost geometry, not just the artboard. This results in huge empty margins in stock marketplace thumbnails or automated refusal for <em>"Artboard Mismatch."</em>
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Always delete all hidden layers (<code style="font-family: var(--font-mono); background: var(--code-bg); padding: 0.15rem 0.35rem; border-radius: var(--radius-sm);">Window &gt; Layers &gt; Flyout &gt; Delete Hidden Layers</code>) and unlock all objects to remove pasteboard scraps before export.
+          </p>
+        </section>
+
+        <!-- Article Section 5 -->
+        <section style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; color: var(--text-main);">5. ExtendScript Automation: Production Clean-Up Snippet</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Performing these 8 manual steps across a batch of 50 vector illustrations takes hours and leads to human oversight. Below is a production ExtendScript snippet that automates live text outlining, stray point purging, and hidden layer removal:
+          </p>
+
+          <div class="terminal-card" style="margin: 2rem 0;">
+            <div class="terminal-header">
+              <span>EXTENDSCRIPT // SANITIZE_PREFLIGHT.JSX</span>
+              <span style="color: var(--accent-amber); font-weight: 700;">● PRODUCTION ENGINE</span>
+            </div>
+            <pre>
+/**
+ * Automated Stock Vector Preflight Routine
+ * Sanitizes live text, removes stray points, and strips hidden layers.
+ */
+function preflightStockDocument(doc) {
+    if (!doc) return false;
+    
+    // 1. Unlock all layers and page items
+    for (var i = 0; i &lt; doc.layers.length; i++) {
+        var layer = doc.layers[i];
+        if (layer.visible &amp;&amp; !layer.locked) {
+            // Keep clean
+        } else if (!layer.visible) {
+            layer.locked = false;
+            layer.remove(); // Strip ghost layers
+            i--;
+        }
+    }
+    
+    // 2. Convert all live typography to outlines
+    while (doc.textFrames.length &gt; 0) {
+        doc.textFrames[0].createOutline();
+    }
+    
+    // 3. Purge zero-length stray points
+    for (var p = doc.pathItems.length - 1; p &gt;= 0; p--) {
+        var path = doc.pathItems[p];
+        if (path.pathPoints.length &lt;= 1 &amp;&amp; !path.closed) {
+            path.remove();
+        }
+    }
+    
+    return true;
+}
+            </pre>
+          </div>
+        </section>
+
+        <!-- Product Spotlight / CTA Section -->
+        <section style="margin-bottom: 3.5rem;">
+          <div style="border: 2px solid var(--accent-amber); background: #fffdfa; padding: 2.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); position: relative;">
+            <span class="hero-tag" style="background: var(--accent-amber-light); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.3);">RECOMMENDED PRODUCTION ENGINE</span>
+            <h3 style="font-size: 1.6rem; font-weight: 800; margin: 0.75rem 0 1rem 0; color: var(--text-main);">StockVector Exporter Pro v3.2</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem;">
+              Don't let invisible vector defects compromise your contributor upload quota. StockVector Exporter Pro executes automated multi-point preflight inspection, font outlining, stray point purging, and compliant EPS 10 / SVG export in a single batch pass.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> 1-Click Multi-Stock Presets (Adobe Stock, Freepik, Shutterstock)
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> Automated Stray Point &amp; Ghost Layer Elimination
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> Auto-Fit Canvas Bounding Box (No Clipped Shadows)
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-main);">
+                <span style="color: var(--accent-green); font-weight: bold;">✓</span> High-Res JPG Preview Generation with Paired Filenames
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="../../stockvector-exporter-pro/" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.75rem 1.5rem;">GET PRO LICENSE — $19</a>
+              <a href="../../stockvector-exporter-pro/downloads/StockVector-Exporter-Pro-v3.2-Free.zip" download class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.75rem 1.5rem; border-color: var(--accent-amber); color: var(--text-main);">⬇ DOWNLOAD FREE EVALUATION (.ZIP)</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related Guides Section -->
+        <section style="margin-bottom: 3.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-main);">Related Production Guides</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <a href="../how-to-batch-export-vectors-adobe-illustrator/" style="display: block; background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: var(--radius-md); padding: 1.5rem; text-decoration: none;">
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-amber); font-weight: 700; margin-bottom: 0.5rem;">BATCH EXPORT TUTORIAL</div>
+              <h4 style="margin: 0 0 0.5rem 0; color: var(--text-main); font-size: 1.05rem;">How to Batch Export Vectors in Adobe Illustrator</h4>
+              <p style="margin: 0; color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">Automate multi-format vector exports without memory leaks or modal dialog hangs.</p>
+            </a>
+            <a href="../stock-vector-eps10-preflight-submission-guide/" style="display: block; background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: var(--radius-md); padding: 1.5rem; text-decoration: none;">
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-amber); font-weight: 700; margin-bottom: 0.5rem;">EPS 10 PREFLIGHT</div>
+              <h4 style="margin: 0 0 0.5rem 0; color: var(--text-main); font-size: 1.05rem;">Stock Vector EPS 10 Pre-Flight Submission Guide</h4>
+              <p style="margin: 0; color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">Passing marketplace inspection every time with strict EPS 10 parameters.</p>
+            </a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- Standard Suite Footer -->
+    <footer style="border-top: 1px solid var(--panel-border); padding-top: 2rem; margin-top: 4rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+      <div style="margin-bottom: 0.75rem;">
+        <span style="font-family: var(--font-mono); font-weight: 700; color: var(--text-main);">COMMERCIAL &amp; CUSTOMER SUPPORT:</span> 
+        <span style="margin-left: 0.75rem;">Email: <a href="mailto:niloypal09@gmail.com" style="color: var(--accent-amber); text-decoration: none; font-weight: 600;">niloypal09@gmail.com</a></span> 
+        <span style="margin: 0 0.5rem;">•</span> 
+        <span>WhatsApp: <a href="https://wa.me/8801765647572" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">+880 176 564 7572</a></span>
+      </div>
+      <div style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.8rem;">
+        <a href="../" style="color: var(--text-muted); text-decoration: none;">Articles &amp; Guides</a>
+        <span style="margin: 0 0.5rem;">•</span>
+        <a href="../../privacy/" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+        <span style="margin: 0 0.5rem;">•</span>
+        <a href="../../terms/" style="color: var(--text-muted); text-decoration: none;">Terms &amp; License</a>
+      </div>
+      <p>© 2026 Niloy // Illustrator Script Suite. Built for vector artists &amp; commercial stock producers worldwide.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

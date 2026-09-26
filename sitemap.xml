@@ -2,49 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/stockvector-exporter-pro/help.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/blog/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://nil4gh.github.io/nildevscripts/blog/fixing-stock-vector-rejections-illustrator-preflight-guide/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nil4gh.github.io/nildevscripts/blog/how-to-batch-export-vectors-adobe-illustrator/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/blog/stock-vector-eps10-preflight-submission-guide/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/privacy/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://nil4gh.github.io/nildevscripts/terms/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
